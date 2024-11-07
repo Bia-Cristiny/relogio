@@ -1,0 +1,77 @@
+/* exportar fonte */
+@font-face {
+    font-family: "minha fonte";
+    src: url("../fonts/Kitward\ Demo.ttf");
+}
+
+/* reset geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "minha fonte";
+}
+
+body{
+    background: url("images/fundo1.jpg") center no-repeat; 
+    background-size: cover;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+.relogio{
+    background-color: rgba(240, 248, 255, 0.11);
+    width: 80%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+    box-shadow: 8px 8px 8px;
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+}
+
+.relogio div{
+    background-color:rgba(154, 72, 221, 0.158);
+    border-radius: 8px;
+    padding: 2%;
+    margin: 0 1rem;
+    box-shadow: 5px 5px 8px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+}
+
+.relogio div span{
+    font-size: 7rem;
+    color: #fff;
+}
+
+.relogio div span.tempo{
+    font-size: 1rem;
+    color: rgb(71, 3, 110);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .relogio{
+        flex-direction: column;
+        width: 90%;
+        height: 90vh;   
+    }
+
+    .relogio div{
+        width: 90%;
+        height: 25%;
+        justify-content: center;
+    }
+
+    .relogio div span{
+        font-size: 5rem;
+    }
+}
